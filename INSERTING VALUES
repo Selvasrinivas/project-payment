@@ -1,0 +1,36 @@
+USER TABLE
+
+INSERT INTO `144_bill_payment_system`.`user` (`user_id`, `first_name`, `last_name`, `age`, `gender`, `contact_number`, `pan`, `aadhar_number`, `usr_id`, `password`) VALUES ('2', 'Hari', 'Baskar', '25', 'male', '9874563214', '7425635874', '326585741256', 'usr2', '$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK');
+UPDATE `144_bill_payment_system`.`user` SET `user_id`='1', `first_name`='Rama', `last_name`='Rao', `age`='45', `usr_id`='usr1', `password`='$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK' WHERE `user_id`='2';
+INSERT INTO `144_bill_payment_system`.`user` (`user_id`, `first_name`, `last_name`, `age`, `gender`, `contact_number`, `pan`, `aadhar_number`, `usr_id`, `password`) VALUES ('3', 'Raj', 'Sharma', '36', 'male', '7485963214', '5874693214', '124578963265', 'usr3', '$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK');
+INSERT INTO `144_bill_payment_system`.`user` (`user_id`, `first_name`, `last_name`, `age`, `gender`, `contact_number`, `pan`, `aadhar_number`, `usr_id`, `password`) VALUES ('4', 'Neha', 'Sharma', '45', 'female', '9696857474', '8574659585', '365214789654', 'usr4', '$2a$10$R/lZJuT9skteNmAku9Y7aeutxbOKstD5xE5bHOf74M2PHZipyt3yK');
+
+ROLE TABLE
+
+INSERT INTO `144_bill_payment_system`.`role` (`ro_id`, `ro_name`) VALUES ('1', 'SUPER_ADMIN');
+INSERT INTO `144_bill_payment_system`.`role` (`ro_id`, `ro_name`) VALUES ('2', 'ROLE_ADMIN');
+INSERT INTO `144_bill_payment_system`.`role` (`ro_id`, `ro_name`) VALUES ('3', 'ROLE_USER');
+
+
+BILL TYPE TABLE
+
+INSERT INTO `144_bill_payment_system`.`bill_types` (`bill_type_id`, `bill_type_name`) VALUES ('1', 'ELECTRICITY');
+INSERT INTO `144_bill_payment_system`.`bill_types` (`bill_type_id`, `bill_type_name`) VALUES ('2', 'DTH');
+INSERT INTO `144_bill_payment_system`.`bill_types` (`bill_type_id`, `bill_type_name`) VALUES ('3', 'LOAN');
+INSERT INTO `144_bill_payment_system`.`bill_types` (`bill_type_id`, `bill_type_name`) VALUES ('4', 'PHONE');
+
+
+BILL TABLE
+INSERT INTO `144_bill_payment_system`.`bill` (`bill_id`, `bill_amount`, `bill_types_bill_type_id`, `user_user_id`) VALUES ('1', '300', '1', '1');
+INSERT INTO `144_bill_payment_system`.`bill` (`bill_id`, `bill_amount`, `bill_types_bill_type_id`, `user_user_id`) VALUES ('2', '450', '2', '1');
+INSERT INTO `144_bill_payment_system`.`bill` (`bill_id`, `bill_amount`, `bill_types_bill_type_id`, `user_user_id`) VALUES ('3', '758', '3', '2');
+
+user_role table
+
+
+INSERT INTO `144_bill_payment_system`.`user_role` (`ur_id`, `ur_us_id`, `ur_ro_id`, `role_ro_id`) VALUES ('1', '1', '1', '1');
+
+vendor table
+
+INSERT INTO `144_bill_payment_system`.`vendor` (`vendor_name`, `vendor_company`, `vendor_type`, `ve_address`, `ve_country`, `ve_state`, `email`, `ve_contact_number`, `ve_web_site`, `ve_certificate_issue_date`, `ve_certificate_validity_date`, `ve_year_of_establishment`, `ve_payment_gateway`, `bill_bill_id1`) VALUES ('Ram', 'Vodafone', 'Telephone', 'Gachibowli', 'India', 'TS', '123@gmail.com', '7845748596', 'vodafone.co.in', '2019-11-20', '2022-10-02', '1998', 'paytm', '1');
+INSERT INTO `144_bill_payment_system`.`vendor` (`vendor_name`, `vendor_company`, `vendor_type`, `ve_address`, `ve_country`, `ve_state`, `email`, `ve_contact_number`, `ve_web_site`, `ve_certificate_issue_date`, `ve_certificate_validity_date`, `ve_year_of_establishment`, `ve_payment_gateway`, `bill_bill_id1`) VALUES ('Raj', 'TATA SKY', 'DTH', 'Madhapur', 'India', 'TS', '456@gmail.com', '7447855541', 'tata.sky1.com', '2019-07-06', '2025-05-05', '2000', 'paytm', '2');
